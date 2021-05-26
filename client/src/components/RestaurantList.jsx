@@ -4,6 +4,7 @@ import { RestaurantContext } from '../context/RestaurantContext';
 
 const RestaurantList = (props) => {
   const { restaurants, setRestaurants } = useContext(RestaurantContext);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
