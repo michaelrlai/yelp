@@ -5,7 +5,7 @@ import Reviews from '../components/Reviews';
 import StarRating from '../components/StarRating';
 import { RestaurantContext } from '../context/RestaurantContext';
 
-const RestaurantdetailPage = () => {
+const RestaurantDetailPage = () => {
   const { id } = useParams();
   const { selectedRestaurant, setSelectedRestaurant } =
     useContext(RestaurantContext);
@@ -34,4 +34,4 @@ const RestaurantdetailPage = () => {
   );
 };
 
-export default RestaurantdetailPage;
+export default RestaurantDetailPage;
