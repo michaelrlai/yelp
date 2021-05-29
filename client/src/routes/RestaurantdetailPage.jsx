@@ -6,7 +6,7 @@ import Reviews from '../components/Reviews';
 import StarRating from '../components/StarRating';
 import { RestaurantContext } from '../context/RestaurantContext';
 
-const RestaurantDetailPage = () => {
+const RestaurantdetailPage = () => {
   const { id } = useParams();
   const { selectedRestaurant, setSelectedRestaurant } =
     useContext(RestaurantContext);
@@ -22,6 +22,7 @@ const RestaurantDetailPage = () => {
     };
     fetchData();
   }, []);
+
   return (
     <div>
       {selectedRestaurant && (
@@ -36,4 +37,4 @@ const RestaurantDetailPage = () => {
   );
 };
 
-export default RestaurantDetailPage;
+export default RestaurantdetailPage;

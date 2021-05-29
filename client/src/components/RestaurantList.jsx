@@ -84,30 +84,6 @@ const RestaurantList = (props) => {
                 </tr>
               );
             })}
-          {/*           <tr>
-            <td>mdconalds</td>
-            <td>new york</td>
-            <td>$$</td>
-            <td>Rating</td>
-            <td>
-              <button className="btn btn-warning btn-sm">Update</button>
-            </td>
-            <td>
-              <button className="btn btn-danger btn-sm">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>mdconalds</td>
-            <td>new york</td>
-            <td>$$</td>
-            <td>Rating</td>
-            <td>
-              <button className="btn btn-warning btn-sm">Update</button>
-            </td>
-            <td>
-              <button className="btn btn-danger btn-sm">Delete</button>
-            </td>
-          </tr> */}
         </tbody>
       </table>
     </div>
