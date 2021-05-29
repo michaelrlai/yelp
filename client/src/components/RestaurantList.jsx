@@ -52,38 +52,39 @@ const RestaurantList = (props) => {
           </tr>
         </thead>
         <tbody className="">
-          {restaurants &&
-            restaurants.map((restaurant) => {
-              return (
-                <tr
-                  onClick={() => {
-                    handleRestaurantSelect(restaurant.id);
-                  }}
-                  key={restaurant.id}
-                >
-                  <td>{restaurant.name}</td>
-                  <td>{restaurant.location}</td>
-                  <td>{'$'.repeat(restaurant.price_range)}</td>
-                  <td>reviews</td>
-                  <td>
-                    <button
-                      onClick={(e) => handleUpdate(e, restaurant.id)}
-                      className="btn btn-warning btn-sm"
-                    >
-                      Update
-                    </button>
-                  </td>
-                  <td>
-                    <button
-                      onClick={(e) => handleDelete(e, restaurant.id)}
-                      className="btn btn-danger btn-sm"
-                    >
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-              );
-            })}
+          {restaurants
+            ? restaurants.map((restaurant) => {
+                return (
+                  <tr
+                    onClick={() => {
+                      handleRestaurantSelect(restaurant.id);
+                    }}
+                    key={restaurant.id}
+                  >
+                    <td>{restaurant.name}</td>
+                    <td>{restaurant.location}</td>
+                    <td>{'$'.repeat(restaurant.price_range)}</td>
+                    <td>reviews</td>
+                    <td>
+                      <button
+                        onClick={(e) => handleUpdate(e, restaurant.id)}
+                        className="btn btn-warning btn-sm"
+                      >
+                        Update
+                      </button>
+                    </td>
+                    <td>
+                      <button
+                        onClick={(e) => handleDelete(e, restaurant.id)}
+                        className="btn btn-danger btn-sm"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })
+            : null}
         </tbody>
       </table>
     </div>
